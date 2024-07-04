@@ -8,7 +8,7 @@ pipeline {
             steps {
                 git 'https://github.com/Mahesh-git-T/personal-projects.git'
                 sh 'docker build -t my-app .'
-                sh 'docker tag myapp:latest $REGISTRY_URL/myapp:latest'
+                sh 'docker tag myapp:latest https://hub.docker.com/repository/docker/mahesht2000/personal_project/myapp:latest'
                 sh 'docker push https://hub.docker.com/repository/docker/mahesht2000/personal_project/myapp:latest'
             }
         }
