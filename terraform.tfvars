@@ -1,1 +1,3 @@
-location = "South India"
+variable {
+    location = "South India"
+}
