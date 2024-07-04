@@ -13,7 +13,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "Azure_rg" {
   name     = "Dev_rg"
-  location = var.location
+  location = $var.location
   tags = {
     environment = "dev"
   }
