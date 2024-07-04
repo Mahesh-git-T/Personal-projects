@@ -33,11 +33,6 @@ resource "azurerm_subnet" "Azure_sub" {
   address_prefixes     = ["10.0.1.0/24"]
 }
 
-resource "azurerm_resource_group" "example" {
-  name     = "example-resources"
-  location = "West Europe"
-}
-
 resource "azurerm_network_security_group" "Azure_NSG" {
   name                = "DevNetworkSecurityGroup1"
   location            = azurerm_resource_group.Azure_rg.location
@@ -99,7 +94,7 @@ resource "azurerm_linux_virtual_machine" "Azure_vm" {
   ]
 
   admin_ssh_key {
-    username   = "adminuser"
+    username   = "adminuser1"
     public_key = file("~/.ssh/id_rsa.pub")
   }
 
