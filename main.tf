@@ -13,7 +13,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "Azure_rg" {
   name     = "Dev_rg"
-  location = US central
+  location = "South India"
   tags = {
     environment = "dev"
   }
